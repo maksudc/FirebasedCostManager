@@ -1,11 +1,14 @@
 package me.maksud.firebasecostmanagement.activities.core;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.firebase.client.Firebase;
+
 import me.maksud.firebasecostmanagement.R;
+import me.maksud.firebasecostmanagement.factories.BigBangFactory;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,6 +16,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Firebase firebaseRef = BigBangFactory.getInstance(getApplicationContext()).getFirebaseRef();
+
     }
 
 
