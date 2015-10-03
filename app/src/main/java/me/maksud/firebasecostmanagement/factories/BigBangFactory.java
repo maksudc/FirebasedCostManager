@@ -21,6 +21,8 @@ public class BigBangFactory {
     private BigBangFactory(Context context){
 
         Firebase.setAndroidContext(context);
+        Firebase.getDefaultConfig().setPersistenceEnabled(BaseSettings.FIREBASE_PERSISTENCE);
+
         firebaseRef = new Firebase(BaseSettings.FIREBASE_DB_URL);
     }
 

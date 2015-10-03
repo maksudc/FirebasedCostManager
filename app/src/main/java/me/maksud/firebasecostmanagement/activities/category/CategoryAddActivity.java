@@ -1,30 +1,25 @@
-package me.maksud.firebasecostmanagement.activities.core;
+package me.maksud.firebasecostmanagement.activities.category;
 
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.firebase.client.Firebase;
-
 import me.maksud.firebasecostmanagement.R;
-import me.maksud.firebasecostmanagement.factories.BigBangFactory;
 
-public class MainActivity extends AppCompatActivity {
+public class CategoryAddActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        Firebase firebaseRef = BigBangFactory.getInstance(getApplicationContext()).getFirebaseRef();
+        setContentView(R.layout.activity_category_add);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_category_add, menu);
         return true;
     }
 

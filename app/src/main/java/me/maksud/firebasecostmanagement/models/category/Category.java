@@ -1,18 +1,19 @@
 package me.maksud.firebasecostmanagement.models.category;
 
-import java.util.Date;
-
 import me.maksud.firebasecostmanagement.models.BaseModel;
 
 /**
  * Created by maksud on 10/2/15.
  */
 public class Category extends BaseModel {
+
+    public static final String ID = "id";
     public String id;
+
+    public static final String NAME = "name";
     public String name;
 
-    public Date dateAdded;
-    public Date lastUpdated;
+    public static final String PATH = "categories";
 
     public String getId() {
         return id;
@@ -28,21 +29,5 @@ public class Category extends BaseModel {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public Date getDateAdded() {
-        return dateAdded;
-    }
-
-    public void setDateAdded(Date dateAdded) {
-        this.dateAdded = dateAdded;
-    }
-
-    public Date getLastUpdated() {
-        return lastUpdated;
-    }
-
-    public void setLastUpdated(Date lastUpdated) {
-        this.lastUpdated = lastUpdated;
     }
 }

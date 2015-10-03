@@ -1,7 +1,5 @@
 package me.maksud.firebasecostmanagement.models.generalaccount;
 
-import java.util.Date;
-
 import me.maksud.firebasecostmanagement.models.BaseModel;
 
 /**
@@ -12,8 +10,7 @@ public class GeneralAccount extends BaseModel {
     public String id;
     public String name;
 
-    public Date dateAdded;
-    public Date lastUpdated;
+    public static final String PATH = "generalaccounts";
 
     public String getId() {
         return id;
@@ -29,21 +26,5 @@ public class GeneralAccount extends BaseModel {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public Date getDateAdded() {
-        return dateAdded;
-    }
-
-    public void setDateAdded(Date dateAdded) {
-        this.dateAdded = dateAdded;
-    }
-
-    public Date getLastUpdated() {
-        return lastUpdated;
-    }
-
-    public void setLastUpdated(Date lastUpdated) {
-        this.lastUpdated = lastUpdated;
     }
 }
