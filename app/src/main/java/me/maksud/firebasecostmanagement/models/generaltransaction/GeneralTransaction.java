@@ -3,9 +3,7 @@ package me.maksud.firebasecostmanagement.models.generaltransaction;
 import java.util.ArrayList;
 
 import me.maksud.firebasecostmanagement.models.BaseModel;
-import me.maksud.firebasecostmanagement.models.category.Category;
-import me.maksud.firebasecostmanagement.models.generalaccount.GeneralAccount;
-import me.maksud.firebasecostmanagement.models.generalentity.GeneralEntity;
+import me.maksud.firebasecostmanagement.settings.generaltransaction.TransactionSettings;
 
 /**
  * Created by maksud on 10/2/15.
@@ -13,10 +11,16 @@ import me.maksud.firebasecostmanagement.models.generalentity.GeneralEntity;
 public class GeneralTransaction extends BaseModel {
 
     public String id;
-    public GeneralAccount account;
-    public Category category;
+    public String account;
+    public String  category;
 
-    public ArrayList<GeneralEntity> entities;
+    public String description;
+    public double amount;
+    public int direction = TransactionSettings.DEFAULT_TRANSACTION_DIRECTION;
+
+    public ArrayList<String> entities;
+
+    public static final String PATH = "generaltransactions";
 
     public String getId() {
         return id;
@@ -26,29 +30,51 @@ public class GeneralTransaction extends BaseModel {
         this.id = id;
     }
 
-    public GeneralAccount getAccount() {
+    public String getAccount() {
         return account;
     }
 
-    public void setAccount(GeneralAccount account) {
+    public void setAccount(String account) {
         this.account = account;
     }
 
-    public Category getCategory() {
+    public String getCategory() {
         return category;
     }
 
-    public void setCategory(Category category) {
+    public void setCategory(String category) {
         this.category = category;
     }
 
-    public ArrayList<GeneralEntity> getEntities() {
+    public ArrayList<String> getEntities() {
         return entities;
     }
 
-    public void setEntities(ArrayList<GeneralEntity> entities) {
+    public void setEntities(ArrayList<String> entities) {
         this.entities = entities;
     }
 
+    public String getDescription() {
+        return description;
+    }
 
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public double getAmount() {
+        return amount;
+    }
+
+    public void setAmount(double amount) {
+        this.amount = amount;
+    }
+
+    public int getDirection() {
+        return direction;
+    }
+
+    public void setDirection(int direction) {
+        this.direction = direction;
+    }
 }

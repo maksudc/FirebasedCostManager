@@ -26,6 +26,10 @@
             android:name=".activities.category.CategoryAddActivity"
             android:label="@string/title_activity_category_add" >
         </activity>
+        <activity
+            android:name=".activities.generaltransaction.GeneralTransactionAddActivity"
+            android:label="@string/title_activity_general_transaction_add" >
+        </activity>
     </application>
 
 </manifest>

@@ -11,6 +11,7 @@ import android.widget.Button;
 import me.maksud.firebasecostmanagement.R;
 import me.maksud.firebasecostmanagement.activities.category.CategoryAddActivity;
 import me.maksud.firebasecostmanagement.activities.category.CategoryListActivity;
+import me.maksud.firebasecostmanagement.activities.generaltransaction.GeneralTransactionAddActivity;
 
 /**
  * A placeholder fragment containing a simple view.
@@ -27,6 +28,7 @@ public class MainActivityFragment extends Fragment {
 
         Button viewListButton = (Button)view.findViewById(R.id.viewCategoryListButton);
         Button addCategoryButton = (Button)view.findViewById(R.id.addCategoryButton);
+        Button addTransactionNavigationButton = (Button)view.findViewById(R.id.addTransactionNavigationButton);
 
         viewListButton.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -45,6 +47,17 @@ public class MainActivityFragment extends Fragment {
             public void onClick(View v) {
 
                 Intent intent = new Intent(getActivity() , CategoryAddActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+
+                getActivity().finish();
+            }
+        });
+
+        addTransactionNavigationButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity() , GeneralTransactionAddActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
 

@@ -41,4 +41,19 @@ public class CategoryListAdapter extends ArrayAdapter<Category> {
 
         return convertView;
     }
+
+    @Override
+    public View getDropDownView(int position, View convertView,
+                                ViewGroup parent) {
+
+        View view = super.getDropDownView(position , convertView , parent);
+
+
+        TextView labelView = (TextView) view;
+
+        Category item = getItem(position);
+        labelView.setText(item.getName());
+
+        return view;
+    }
 }
